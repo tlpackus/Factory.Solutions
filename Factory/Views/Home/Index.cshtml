@@ -15,12 +15,12 @@
   <h3>No engineers have been added yet!</h3>
 }
 
-@* <ul>
+<ul>
   @foreach (Engineer Engineer in Model)
   {
     <li>@Html.ActionLink($"{Engineer.Name}", "Details","Engineers", new { id = Engineer.EngineerId })</li>
   }
-</ul> *@
+</ul>
 
 <h1>Machines</h1>
 
@@ -29,10 +29,11 @@
   <h3>No machines have been added yet!</h3>
 } 
 
-@* @foreach (Machine Machine in ViewBag.Machines)
+@foreach (Machine Machine in ViewBag.Machines)
 {
   <li>@Html.ActionLink($"{Machine.Name}", "Details", "Machines", new { id = Machine.MachineId })</li>
-} *@
+}
 
 
-<p>@Html.ActionLink("Add new Engineer", "Create")</p>
+<p>@Html.ActionLink("Add new Engineer", "Create", "Engineers")</p>
+<p>@Html.ActionLink("Add new Machine", "Create", "Machines")</p>
